@@ -1,9 +1,10 @@
 <?php
-/ *
-* 微信公众号后台服务器处理程序interface.php
-* 功能:验证消息来源，写入日志，判断公众号名称后调用相应后台响应程序，如wechatcallbackechoserver.php
-* 作者:yongren
-* /
+/ *
+* 微信公众号后台服务器处理程序interface.php
+* 功能:验证消息来源，写入日志，判断公众号名称后调用相应后台响应程序，如wechatcallbackechoserver.php
+* 作者:yongren
+* /
+
 $startTime = microtime(true);
 require_once dirname(__FILE__) . '/common/Common.php';
 
