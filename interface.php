@@ -44,22 +44,22 @@ if(checkSignature()) {
 
 function getWeChatObj($toUserName) {
 	if($toUserName == USERNAME_FINDFACE) {
-		require_once dirname(__FILE__) . '/classes/WeChatCallBackFindFace.php';
+		require_once dirname(__FILE__) . '/class/WeChatCallBackFindFace.php';
 		return new WeChatCallBackFindFace();
 	}
 	if($toUserName == USERNAME_MR) {
-		require_once dirname(__FILE__) . '/classes/WeChatCallBackMeiri10futu.php';
+		require_once dirname(__FILE__) . '/class/WeChatCallBackMeiri10futu.php';
 		return new WeChatCallBackMeiri10futu();
 	}
 	if($toUserName == USERNAME_XIAONIU ) {
-		require_once dirname(__FILE__) . '/classes/WeChatCallBackEchoServer.php';
+		require_once dirname(__FILE__) . '/class/WeChatCallBackEchoServer.php';
 		return new WeChatCallBackEchoServer();
 	}
 	if($toUserName == USERNAME_MYZL || $toUserName == 'gh_2fdb3edbb059') {
-		require_once dirname(__FILE__) . '/classes/WeChatCallBackMYZL.php';
+		require_once dirname(__FILE__) . '/class/WeChatCallBackMYZL.php';
 		return new WeChatCallBackMYZL();
 	}
-	require_once dirname(__FILE__) . '/classes/WeChatCallBack.php';
+	require_once dirname(__FILE__) . '/class/WeChatCallBack.php';
 	return  new WeChatCallBack();
 }
 function exitErrorInput(){

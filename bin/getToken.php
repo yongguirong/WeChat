@@ -1,6 +1,6 @@
 <?php
 require_once dirname(__FILE__) . '/../common/Common.php';
-require_once dirname(__FILE__) . '/../classes/tokenStub.php';
+require_once dirname(__FILE__) . '/../class/tokenStub.php';
 
 interface_log(DEBUG, 0, "***start get token**");
 $token = tokenStub::getToken('ABC');
