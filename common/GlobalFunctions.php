@@ -122,7 +122,7 @@ function ccdb_log($confName ,$logLevel, $errorCode, $logMessage = "no error msg"
 	if (isLogLevelOff("DEBUG") || $logLevel == "DEBUG"){
 		return ;
 	}else {
-		MiniLog::instance(ROOT_PATH . "/log/")->log($confName . "_" . "debug", $prefix . $logMessage);
+		MiniLog::instance(ROOT_PATH . "/log/")->log($confName . "_" . "debug", $prefix . $logMessage.PHP_EOL);
 	}
 }
 
