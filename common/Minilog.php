@@ -1,5 +1,9 @@
 <?php
-
+ /*
+  *script Minilog.php
+  *微型日志记录类
+  *调用方法   MiniLog::instance(ROOT_PATH . "/log/")->log($logFileName, $logMessage);
+ */
 class MiniLog {
 	private static $_instance;
 	private $_path;
@@ -40,7 +44,7 @@ class MiniLog {
 		$handle = $this->getHandle($fileName);
 		$nowTime = time();
 		$logPreffix = date('Y-m-d H:i:s', $nowTime);
-		fwrite($handle, "[$logPreffix][$this->_pid]$message\n");
+		fwrite($handle, "[$logPreffix][$this->_pid]$message".PHP_EOL);
 		return true;
 	}
 	
