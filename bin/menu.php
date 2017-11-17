@@ -1,6 +1,6 @@
 <?php
 require_once dirname(__FILE__) . '/../common/Common.php';
-require_once dirname(__FILE__) . '/../class/menuStub.php';
+require_once dirname(__FILE__) . '/../classes/menuStub.php';
 
 interface_log(DEBUG, 0, "***start menu**");
 /*$menuData = array(
