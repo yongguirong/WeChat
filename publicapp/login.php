@@ -3,29 +3,7 @@
 
 // Need the utilities file:
 require('includes/utilities.inc.php');
-// Create a new form:
-//set_include_path(get_include_path() . PATH_SEPARATOR . '/usr/share/pear/');
-set_include_path(get_include_path());
-require('HTML/QuickForm2.php');
-$form = new HTML_QuickForm2('loginForm');
 
-// Add the email address:
-$email = $form->addElement('text', 'email');
-$email->setLabel('Email Address');
-$email->addFilter('trim');
-$email->addRule('required', 'Please enter your email address.');
-$email->addRule('email', 'Please enter your email address.');
-
-// Add the password field:
-$password = $form->addElement('password', 'pass');
-$password->setLabel('Password');
-$password->addFilter('trim');
-$password->addRule('required', 'Please enter your password.');
-
-// Add the submit button:
-$form->addElement('submit', 'submit', array('value'=>'Login'));
-echo $form;
-exit(0);
 // Check for a form submission:
 if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form submission
     

@@ -11,24 +11,6 @@ if (!$user->canCreatePage()) {
 }
     
 // Create a new form:
-set_include_path(get_include_path() . PATH_SEPARATOR . '/usr/local/pear/share/pear/');
-require('HTML/QuickForm2.php');
-$form = new HTML_QuickForm2('addPageForm');
-
-// Add the title field:
-$title = $form->addElement('text', 'title');
-$title->setLabel('Page Title');
-$title->addFilter('strip_tags');
-$title->addRule('required', 'Please enter a page title.');
-
-// Add the content field:
-$content = $form->addElement('textarea', 'content');
-$content->setLabel('Page Content');
-$content->addFilter('trim');
-$content->addRule('required', 'Please enter the page content.');
-
-// Add the submit button:
-$submit = $form->addElement('submit', 'submit', array('value'=>'Add This Page'));
 
 // Check for a form submission:
 if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form submission
