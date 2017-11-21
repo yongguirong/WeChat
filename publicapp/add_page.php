@@ -11,7 +11,7 @@ if (!$user->canCreatePage()) {
 }
     
 // Create a new form:
-
+echo 'please use quickform to create a new form in this page!';
 // Check for a form submission:
 if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form submission
     
